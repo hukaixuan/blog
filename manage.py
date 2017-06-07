@@ -18,7 +18,7 @@ def make_shell_context():
 	return dict(app=app, db=db, User=User, Follow=Follow, Role=Role,
                 Permission=Permission, Post=Post, Comment=Comment)
 
-manager.add_command('runserver', Server(use_debugger=True))
+manager.add_command('runserver', Server(host='0.0.0.0', port='5001', use_debugger=True))
 manager.add_command('shell', Shell(make_context = make_shell_context))
 manager.add_command('db', MigrateCommand)
 
