@@ -1,0 +1,5 @@
+亲爱的 {{user.username}}:
+	欢迎注册
+	点击下面链接激活您的账户
+	<a href="{{ url_for('auth.confirm', token=token, _external=True) }}">点击此处</a>
+	祝您生活愉快

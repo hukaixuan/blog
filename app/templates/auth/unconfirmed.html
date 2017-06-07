@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+	<h1>Hello, {{current_user.username}}</h1>
+	<h3>You have not confirmed your account yet.</h3>
+	<p>before you can access this site, you need to confirm you account, check your inbox, you should received a email a with confirmation link.</p>
+	<br>
+	<p>Need another email? <a href="{{ url_for('auth.resend_confirmation') }}">Click here</a></p>
+{% endblock %}
+
+
